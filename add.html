@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <!--<link href="favicon.ico" rel="shortcut icon">-->
+    <title>放心用</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function () {
+            new
+            FastClick(document.body);
+        });
+        $(document).ready(function () {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyheight = $(".rest-assured").height();
+            var heade = $("header").height();
+            var num= parseInt( $('.add-main').css('marginTop') );
+            var numw= parseInt( $('.add-main').css('borderTop') );
+            var formheight = winHeight-heade-num-numw;
+            var formfheight = bodyheight-heade-num-numw;
+            if (winHeight > bodyheight){
+                $(".rest-assured").css({height: winHeight});
+                $(".add-main").css({height: formheight});
+            }else {
+                $(".rest-assured").css({height: bodyheight});
+                $(".add-main").css({height: formfheight});
+            }
+//            点击三级菜单
+            var that;
+            $(".add-list2").on("click",".seled", function(){
+                that =this;
+                $(".selei").html($(this).html());
+                $(".add-pop-shade").show();
+                $(".add-pop").show();
+            });
+            //                加减
+            $(".icon-jia1").on("click",function(){
+                var n=$(".nums").val();
+                var numk=parseInt(n)+1;
+                if(numk==0){alert("不能为0!");}
+                $(".nums").attr("value",numk);
+            });
+            $(".icon-jian").on("click",function(){
+                var ni=$(".nums").val();
+                var num=parseInt(ni)-1;
+                if(num==0){alert("不能为0!"); return}
+                $(".nums").attr("value",num);
+            });
+//                关闭
+            $(".icon-guanbi").on("click",function(){
+                $(".add-pop-shade").hide();
+                $(".add-pop").hide();
+            });
+//                确定
+            var idq;
+            var poo2;
+            var poo;
+            var de;
+            $(".add-pop-button").on("click",function(){
+                $(that).css({
+                    background : '#4878e7',
+                    color : '#fff'
+                });
+                $(that).addClass("seledt");
+                $(that).removeClass("seled");
+                idq = $(that).attr("id");
+                poo = $(".nums").val();
+                poo2 = $(".selei").html();
+                $(".add-main-content").append("<div class='cong-add' value='"+idq+"'>"+poo2+"×"+poo+ "<i class='iconfont icon-cha'>"+"</i>"+"</div>");
+                $(".add-pop-shade").hide();
+                $(".add-pop").hide();
+                $(".nums").attr("value",1);
+//                禁止二次编辑
+                if ($(".seled").hasClass("seledt")){
+                    $(".add-list2").off('click','.seledt');
+                }
+            });
+//关闭并移除
+            $(".add-main-content").on("click",".icon-cha", function(){
+                var dg = $(this).parent().attr("value");
+                $(".seledt").each(function () {
+                    var this_id = $(this).attr("id");
+                    if (dg == this_id){
+                        $("#"+this_id).css({
+                            background : '#fff',
+                            color : '#4878e7'
+                        });
+                        $("#"+this_id).addClass("seled");
+                        $("#"+this_id).removeClass("seledt");
+                    }
+                })
+                $(this).parent().remove();
+        });
+        })
+//        select
+        function changtwo(tid){
+            $.post("twoSelect",{"tid":tid},function(json){
+                $(".add-list2").html("");//清空三级
+                for(var i=0;i<json.length;i++){
+                    //添加一个三级
+                    $(".add-list2").append("<div class='seled' id='"+json[i].id+"'>"+json[i].name+"</div>");
+                }
+                $(".add-list2").append("<div class='clearfix'></div>");
+            },'json');
+        }
+        function changond(oid){
+            $.post("oneSelect",{"oid":oid},function(json){
+                $(".add-list1").html("");//清空二级下拉框
+                for(var i=0;i<json.length;i++){
+                    //添加一个二级
+                    $(".add-list1").append("<option value='"+json[i].id+"'>"+json[i].name+"</option>");
+                }
+                changtwo($(".add-list1").val());
+            },'json');
+            //注册二级下拉框事件
+            $(".add-list1").change(function(){
+                changtwo($(this).val());
+            });
+        }
+        $(function(){
+            //初始化一级下拉框
+            $.post("parentSelect",null,function(json){
+                for(var i=0;i<json.length;i++){
+                    //添加一个一级
+                    $(".add-list").append("<option value='"+json[i].id+"'>"+json[i].name+"</option>");
+                }
+                changond($(".add-list").val());
+            },'json');
+            //注册一级下拉框事件
+            $(".add-list").change(function(){
+                changond($(this).val());
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="rest-assured">
+    <header>
+        <img src="img/head.jpg">
+        <p>放心用维修人员工作平台</p>
+        <div class="clearfix"></div>
+    </header>
+    <aside>
+        <div class="add-main">
+           <div class="add-main-title">添加维修硬件</div>
+            <select class="add-list">
+                <!--测试数据-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <!--测试数据end-->
+            </select>
+            <select class="add-list1">
+                <!--测试数据-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <!--测试数据end-->
+            </select>
+            <div class="add-list2">
+                <!--测试数据-->
+                <div class="seled" id="0">添加硬件</div>
+                <div class="seled" id="1">添加维硬件</div>
+                <div class="seled" id="2">添加维修硬件</div>
+                <div class="seled" id="3">添加件</div>
+                <div class="seled" id="4">添件</div>
+                <div class="clearfix"></div>
+                <!--测试数据end-->
+            </div>
+            <div class="add-main-title">已添加的维修硬件</div>
+            <div class="add-main-content"></div>
+            <div class="add-main-botton">添加维修硬件</div>
+        </div>
+    </aside>
+    <div class="add-pop-shade">
+    <div class="add-pop">
+        <span>编辑维修硬件数量</span>
+        <i class="iconfont icon-guanbi"></i>
+        <div class="clearfix"></div>
+        <div class="add-pop-list">
+            <div class="selei">添加维修硬件</div>
+            <div class="add-pop-list-right">
+                <i class="iconfont icon-jian"></i>
+                <input type="text" value="1" class="nums"/>
+                <i class="iconfont icon-jia1"></i>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="add-pop-button">确定</div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

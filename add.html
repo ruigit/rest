@@ -91,8 +91,10 @@
                 }
             });
 //关闭并移除
-            $(".add-main-content").on("click",".icon-cha", function(){
-                var dg = $(this).parent().attr("value");
+//            $(".add-main-content").on("click",".icon-cha", function(){
+//                var dg = $(this).parent().attr("value");
+                $(".add-main-content").on("click",".cong-add", function(){
+                    var dg = $(this).attr("value");
                 $(".seledt").each(function () {
                     var this_id = $(this).attr("id");
                     if (dg == this_id){
@@ -104,7 +106,8 @@
                         $("#"+this_id).removeClass("seledt");
                     }
                 })
-                $(this).parent().remove();
+//                $(this).parent().remove();
+                    $(this).remove();
         });
         })
 //        select

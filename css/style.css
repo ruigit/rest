@@ -389,6 +389,88 @@ header p{
     z-index: 22;
 }
 /*add end*/
+.rest-list-main {
+    width: 95%;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+    background: #fff;
+    padding: 0.3rem 0;
+}
+.rest-list-main label{
+    width: 20%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    padding-left: 5%;
+    font-size: 0.3rem;
+    color: #b2b3b5;
+}
+#rest-list{
+    width: 75%;
+    margin: 0 2.5% 0.35rem 2.5%;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px #bdc8e4 solid;
+    text-indent: 8%;
+    font-size: 0.3rem;
+    color: #b2b3b5;
+    background: url(../img/arrow.png) no-repeat scroll 95% center transparent;
+    padding-right: 14px;
+}
+.rest-list-control{
+    width: 71%;
+    margin: 0 7.3% 0.35rem 0;
+    height: 0.55rem;
+    line-height: 0.55rem;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px #bdc8e4 solid;
+    text-indent: 8%;
+    float: right;
+    color: #b2b3b5;
+    font: 0.3rem Arial;
+    padding-right: 14px;
+}
+/*list end*/
+.rest-button-main{
+    width: 95%;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+    background: #fff;
+    padding: 0.3rem 0;
+}
+.rest-button-list{
+    width: 80%;
+    height: auto;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #4878e7;
+    border: 1px #4878e7 solid;
+    margin: 0.5rem auto;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+.rest-list-button{
+    width: 80%;
+    height: auto;
+    line-height: 1rem;
+    font-size: 0.4rem;
+
+    border: 1px #4878e7 solid;
+    margin: 0.5rem auto;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: #4878e7;
+}
+/*button end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

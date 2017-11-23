@@ -478,7 +478,6 @@ header p{
     left:0;
     z-index:220;
     opacity:0.3;
-
 }
 .loading{
     width: 50%;
@@ -494,12 +493,10 @@ header p{
 @media only screen and (min-width: 1366px) {
 
 }
-
 /*pad横屏*/
 @media only screen and (min-width: 1024px) {
 
 }
-
 /*pad竖屏*/
 @media only screen and (min-width: 768px) {
 

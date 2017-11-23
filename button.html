@@ -37,6 +37,7 @@
             //数据加载时的加载图,用于提示用户数据正在加载!
             var loadDiv = '<div class="loadin"><div class="loading"></div></div>';
             $(".rest-button-main").on("click",".load-ing", function(){
+
                 //发送ajax请求获取数据
                 $.ajax({
                     type: 'get',
@@ -65,7 +66,7 @@
     </script>
 </head>
 <body>
-<div class="rest-assured">
+<div class="rest-assured" style="position: relative;z-index: 210;">
     <header>
         <img src="img/head.jpg">
         <p>放心用维修人员工作平台</p>

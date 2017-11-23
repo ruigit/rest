@@ -404,7 +404,7 @@ header p{
     font-size: 0.3rem;
     color: #b2b3b5;
 }
-#rest-list{
+.rest-list{
     width: 75%;
     margin: 0 2.5% 0.35rem 2.5%;
     height: 0.6rem;

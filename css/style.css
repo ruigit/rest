@@ -460,7 +460,6 @@ header p{
     height: auto;
     line-height: 1rem;
     font-size: 0.4rem;
-
     border: 1px #4878e7 solid;
     margin: 0.5rem auto;
     text-align: center;
@@ -469,6 +468,26 @@ header p{
     border-radius: 0.5rem;
     color: #fff;
     background: #4878e7;
+}
+.loadin{
+    width:100%;
+    height:100%;
+    background-color:#000;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:220;
+    opacity:0.3;
+
+}
+.loading{
+    width: 50%;
+    height: 2rem;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    z-index: 222;
+    background: url("../img/loading.gif") no-repeat center;
 }
 /*button end*/
 /*pad-pro横屏*/

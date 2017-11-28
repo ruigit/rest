@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <!--<link href="favicon.ico" rel="shortcut icon">-->
+    <title>苏州鸿铁智能科技有限公司</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function () {
+            new
+            FastClick(document.body);
+        });
+
+        $(document).ready(function () {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyheight = $(".rest-assured").height();
+            if (winHeight > bodyheight){
+                $(".rest-assured").css({height: winHeight});
+            }else {
+                $(".rest-assured").css({height: bodyheight});
+            }
+            //数据加载时的加载图,用于提示用户数据正在加载!
+            var loadDiv = '<div class="loadin"><div class="loading"></div></div>';
+            $("aside").on("click",".jieche", function(){
+                $("aside .rest-button-main ,.con-button-list").removeClass("condisplay");
+                $(".jieche").addClass("condisplay");
+                //发送ajax请求获取数据
+//                $.ajax({
+//                    type: 'get',
+//                    url: '',
+//                    data: data,
+//                    dataType: 'json',
+//                    //数据加载前
+//                    beforeSend: function(data) {
+//                        //如果没有加载数据，会显示loading
+//                        if(data.readyState == 0) {
+//                                //将loading插入
+//                                 $('body').append(loadDiv);
+//                        }
+//                    },
+//                    success: function(data) {
+//                        //成功之后，loading 隐藏
+//                        if(data.status == 200) {
+//                            //移除用于提示用户的loading
+//                            $('body .loading').remove();
+//                            $('body .loading,.loadin').remove();
+//                        }
+//                    }
+//                });
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="rest-assured" style="position: relative;z-index: 210;">
+    <header>
+        <img src="img/logo4.png">
+        <p>苏州鸿铁智能科技有限公司</p>
+        <div class="clearfix"></div>
+    </header>
+    <aside>
+        <div class="rest-button-main condisplay">
+            <div class="rest-button-list">按钮1</div>
+            <div class="rest-button-list">按钮2</div>
+            <div class="rest-button-list">按钮1</div>
+            <div class="rest-button-list">按钮2</div>
+            <div class="rest-button-list">按钮1</div>
+            <div class="rest-button-list">按钮2</div>
+        </div>
+        <div class="con-button-main">
+            <div class="con-button-list jieche">接车</div>
+            <div class="con-button-list condisplay">交车</div>
+            <div class="con-button-list">个人中心</div>
+        </div>
+    </aside>
+</div>
+</body>
+</html>

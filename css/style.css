@@ -489,6 +489,30 @@ header p{
     background: url("../img/loading.gif") no-repeat center;
 }
 /*button end*/
+.con-button-main{
+    width: 95%;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+    background: #fff;
+    padding: 0.3rem 0;
+}
+.con-button-list{
+    width: 80%;
+    height: auto;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #4878e7;
+    border: 1px #4878e7 solid;
+    margin: 0.5rem auto;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+.condisplay{
+    display: none;
+}
+/*conbutton end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

@@ -501,7 +501,8 @@ header p{
     height: auto;
     line-height: 1rem;
     font-size: 0.4rem;
-    color: #4878e7;
+    color: #fff;
+    background: #4878e7;
     border: 1px #4878e7 solid;
     margin: 0.5rem auto;
     text-align: center;
@@ -513,6 +514,36 @@ header p{
     display: none;
 }
 /*conbutton end*/
+.piclist-main{
+    width: 95%;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+    padding-bottom: 0.2rem;
+    background: #fff;
+    border: 1px #999999 solid;
+    border-bottom: none;
+    -moz-border-radius: 0.2rem 0.2rem 0 0;
+    -webkit-border-radius: 0.2rem 0.2rem 0 0;
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+.piclist-li{
+    width: 95%;
+    height: auto;
+    margin: 0.2rem auto auto auto;
+    text-align: center;
+    -moz-border-radius: 0.2rem 0.2rem 0 0;
+    -webkit-border-radius: 0.2rem 0.2rem 0 0;
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+.piclist-li img{
+    width: 5rem;
+    height: 3rem;
+    border: none;
+    -moz-border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    border-radius: 0.1rem;
+}
+/*piclist end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

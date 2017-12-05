@@ -29,177 +29,198 @@
             //		背景高度
             var winHeight = window.innerHeight;
             var bodyheight = $(".rest-assured").height();
-            if (winHeight > bodyheight){
+            if (winHeight > bodyheight) {
                 $(".rest-assured").css({height: winHeight});
-            }else {
+            } else {
                 $(".rest-assured").css({height: bodyheight});
             }
             var cont = $('div').hasClass('rest-assured-control');
-            if (cont){
-                $(".rest-assured-control").parent().siblings().css("line-height","1.6rem");
+            if (cont) {
+                $(".rest-assured-control").parent().siblings().css("line-height", "1.6rem");
             }
 //            限制维修地区字数
-            $(".rest-assured-main-list dl dt ul li:first-child").each(function(){
-                var maxwidth=8;
-                if($(this).text().length>maxwidth){
-                    $(this).text($(this).text().substring(0,maxwidth));
-                    $(this).html($(this).html()+'');
+            $(".rest-assured-main-list dl dt ul li:first-child").each(function () {
+                var maxwidth = 8;
+                if ($(this).text().length > maxwidth) {
+                    $(this).text($(this).text().substring(0, maxwidth));
+                    $(this).html($(this).html() + '');
                 }
             });
         })
     </script>
 </head>
 <body>
-    <div class="rest-assured">
-        <header>
-            <img src="img/head.jpg">
-            <p>放心用维修人员工作平台</p>
-            <div class="clearfix"></div>
-        </header>
-        <aside>
-            <div class="rest-assured-main">
-                <div class="rest-assured-main-nav">
-                    <ul>
-                        <li>维修地区</li>
-                        <li>发布时间</li>
-                        <li>操作</li>
-                        <div class="clearfix"></div>
-                    </ul>
-                </div>
-                <div class="rest-assured-main-list">
-                    <dl>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街沈本</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街沈本</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">查看表单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街沈本</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">添加硬件</div>
-                                    <div class="rest-assured-button-li rest-assured-control">确认完成</div>
-                                </li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>浑南新区沈本大街</li>
-                                <li>2017-02-02 10:11</li>
-                                <li><div class="rest-assured-button-li">接单</div></li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                    </dl>
-                </div>
-                <div class="rest-assured-main-service">
-                    <dl>
-                        <dt>
-                            <ul>
-                                <li>维修时间</li>
-                                <li>2017-02-02 10:11</li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>维修时间</li>
-                                <li>2017-02-02 10:11</li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                    </dl>
-                    <div class="rest-button-servlist">按钮2</div>
-                </div>
-                <div class="rest-assured-main-repair">
-                    <dl>
-                        <dt>
-                            <ul>
-                                <li>维修时间</li>
-                                <li>2017-02-02 10:11</li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                        <dt>
-                            <ul>
-                                <li>维修时间</li>
-                                <li>2017-02-02 10:11</li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </dt>
-                    </dl>
-                    <div class="rest-button-servlist">按钮2</div>
-                </div>
+<div class="rest-assured">
+    <header>
+        <img src="img/head.jpg">
+        <p>放心用维修人员工作平台</p>
+        <div class="clearfix"></div>
+    </header>
+    <aside>
+        <div class="rest-assured-main">
+            <div class="rest-assured-main-nav">
+                <ul>
+                    <li>维修地区</li>
+                    <li>发布时间</li>
+                    <li>操作</li>
+                    <div class="clearfix"></div>
+                </ul>
             </div>
-        </aside>
-    </div>
+            <div class="rest-assured-main-list">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街沈本</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街沈本</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">查看表单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街沈本</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">添加硬件</div>
+                                <div class="rest-assured-button-li rest-assured-control">确认完成</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>浑南新区沈本大街</li>
+                            <li>2017-02-02 10:11</li>
+                            <li>
+                                <div class="rest-assured-button-li">接单</div>
+                            </li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                </dl>
+            </div>
+            <div class="rest-assured-main-service">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li>维修时间</li>
+                            <li>2017-02-02 10:11</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>维修时间</li>
+                            <li>2017-02-02 10:11</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                </dl>
+                <div class="rest-button-servlist">按钮2</div>
+            </div>
+            <div class="rest-assured-main-repair">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li>维修时间</li>
+                            <li>2017-02-02 10:11</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                    <dt>
+                        <ul>
+                            <li>维修时间</li>
+                            <li>2017-02-02 10:11</li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </dt>
+                </dl>
+                <div class="rest-button-servlist">按钮2</div>
+            </div>
+        </div>
+    </aside>
+</div>
 </body>
 </html>

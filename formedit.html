@@ -30,14 +30,14 @@
             var winHeight = window.innerHeight;
             var bodyheight = $(".rest-assured").height();
 
-            var num= parseInt( $('.form-main').css('marginTop') );
-            var numw= parseInt( $('.form-main').css('borderTop') );
-            var formheight = winHeight-num-numw;
-            var formfheight = bodyheight-num-numw;
-            if (winHeight > bodyheight){
+            var num = parseInt($('.form-main').css('marginTop'));
+            var numw = parseInt($('.form-main').css('borderTop'));
+            var formheight = winHeight - num - numw;
+            var formfheight = bodyheight - num - numw;
+            if (winHeight > bodyheight) {
                 $(".rest-assured").css({height: winHeight});
                 $(".form-main").css({height: formheight});
-            }else {
+            } else {
                 $(".rest-assured").css({height: bodyheight});
                 $(".form-main").css({height: formfheight});
             }
@@ -59,12 +59,30 @@
             </div>
             <div class="formedit-main-list">
                 <dl>
-                    <dt><span>报修单位</span><p>好来</p><div class="clearfix"></div></dt>
-                    <dt><span>单位地址</span><p>辽宁省 沈阳市 和平区 <br />胜利大街南五马路中驰国际501</p><div class="clearfix"></div></dt>
-                    <dt class="edit-form-bor"><span>报修人</span><p><input type="text" name="input_name" class="inputre" placeholder="请输入姓名"></p><div class="clearfix"></div></dt>
-                    <dt class="edit-form-bor"><span>联系电话</span><p><input type="text" name="input_phone" class="inputre" placeholder="请输入电话"></p><div class="clearfix"></div></dt>
-                    <dt class="edit-form-bor"><span>报修部件</span><p><input type="text" name="input_part" class="inputre" placeholder="请输入报修部件"></p><div class="clearfix"></div></dt>
-                    <dt class="edit-form-bor"><span>部件类型</span><p><input type="text" name="input_mold" class="inputre" placeholder="请输入部件类型"></p><div class="clearfix"></div></dt>
+                    <dt><span>报修单位</span>
+                        <p>好来</p>
+                        <div class="clearfix"></div>
+                    </dt>
+                    <dt><span>单位地址</span>
+                        <p>辽宁省 沈阳市 和平区 <br/>胜利大街南五马路中驰国际501</p>
+                        <div class="clearfix"></div>
+                    </dt>
+                    <dt class="edit-form-bor"><span>报修人</span>
+                        <p><input type="text" name="input_name" class="inputre" placeholder="请输入姓名"></p>
+                        <div class="clearfix"></div>
+                    </dt>
+                    <dt class="edit-form-bor"><span>联系电话</span>
+                        <p><input type="text" name="input_phone" class="inputre" placeholder="请输入电话"></p>
+                        <div class="clearfix"></div>
+                    </dt>
+                    <dt class="edit-form-bor"><span>报修部件</span>
+                        <p><input type="text" name="input_part" class="inputre" placeholder="请输入报修部件"></p>
+                        <div class="clearfix"></div>
+                    </dt>
+                    <dt class="edit-form-bor"><span>部件类型</span>
+                        <p><input type="text" name="input_mold" class="inputre" placeholder="请输入部件类型"></p>
+                        <div class="clearfix"></div>
+                    </dt>
                     <dt><textarea name="detailed" class="textareare" cols="50" onfocus="if(value=='详细情况'){value=''}"
                                   onblur="if (value ==''){value='详细情况'}">详细情况</textarea></dt>
                 </dl>

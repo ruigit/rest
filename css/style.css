@@ -181,19 +181,39 @@ header p {
     float: left;
     line-height: 0.5rem;
     font-size: 0.25rem;
-    text-align: center;
+    text-indent: 0.2rem;
     color: #000;
 }
 
 .rest-assured-main-service dl dt ul li:nth-child(1) {
     width: 40%;
+    text-align: left;
 
 }
 
 .rest-assured-main-service dl dt ul li:nth-child(2) {
-    width: 60%;
+    width: 57%;
+    text-align: right;
+    padding-right: 3%;
 }
-
+.width-kz{
+    width: 48%!important;
+}
+.width-kz span{
+     width: 52%;
+     display: block;
+    float: left;
+    height: 0.5rem;
+    overflow: hidden;
+    /*text-align: left;*/
+ }
+.width-kz p{
+    width: 48%;
+    float: left;
+    height: 0.5rem;
+    /*text-align: left;*/
+    overflow: hidden;
+}
 .rest-assured-main-repair {
     width: 95%;
     height: auto;
@@ -212,17 +232,20 @@ header p {
     float: left;
     line-height: 0.5rem;
     font-size: 0.25rem;
-    text-align: center;
+    text-indent: 0.2rem;
     color: #000;
 }
 
 .rest-assured-main-repair dl dt ul li:nth-child(1) {
     width: 40%;
+    text-align: left;
 
 }
 
 .rest-assured-main-repair dl dt ul li:nth-child(2) {
-    width: 60%;
+    width: 57%;
+    text-align: right;
+    padding-right: 3%;
 }
 
 .rest-button-servlist {
@@ -232,7 +255,8 @@ header p {
     font-size: 0.3rem;
     background: #4878e7;
     color: #fff;
-    margin: 0.2rem auto 0.1rem 58%;
+    float: right;
+    margin: 0.2rem 0.2rem 0.1rem auto;
     text-align: center;
     -moz-border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;
@@ -251,7 +275,15 @@ header p {
     border-radius: 0.5rem;
     text-align: center;
 }
-
+.list-over{
+    width: 90%;
+    margin: 0.1rem auto;
+    color: #333;
+    font-size: 0.28rem;
+    line-height: 0.6rem;
+    background: #eaeef9 ;
+    text-align: center;
+}
 /*index end*/
 .form-main {
     width: 95%;

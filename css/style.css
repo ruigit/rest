@@ -20,13 +20,21 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.icon-dlmm:before { content: "\e603"; }
+
 .icon-cha:before { content: "\e606"; }
 
 .icon-jia1:before { content: "\e688"; }
 
+.icon-denglu:before { content: "\e617"; }
+
 .icon-guanbi:before { content: "\e64e"; }
 
+.icon-jinlingyingcaiwangtubiao29:before { content: "\e600"; }
+
 .icon-jian:before { content: "\e650"; }
+
+.icon-chakanmima:before { content: "\e631"; }
 html,
 body {
     font-family:"Hiragino Sans GB","SourceHanSansCN", Helvetica, Arial, sans-serif;
@@ -118,7 +126,67 @@ header p{
 .rest-assured-main-list dl dt ul li:nth-child(3) {
     width: 25%;
 }
+.rest-assured-main-service{
+    width: 95%;
+    height:auto;
+    margin: 0 auto;
+}
+.rest-assured-main-service dl dt{
+    width: 100%;
+    height: auto;
+    margin: 0.1rem auto;
+}
+.rest-assured-main-service dl dt ul li{
+    float: left;
+    line-height: 0.8rem;
+    font-size: 0.25rem;
+    text-align: center;
+    color: #000;
+}
+.rest-assured-main-service dl dt ul li:nth-child(1) {
+    width: 40%;
 
+}
+.rest-assured-main-service dl dt ul li:nth-child(2) {
+    width: 60%;
+}
+.rest-assured-main-repair{
+    width: 95%;
+    height:auto;
+    margin: 0 auto;
+}
+.rest-assured-main-repair dl dt{
+    width: 100%;
+    height: auto;
+    margin: 0.1rem auto;
+}
+.rest-assured-main-repair dl dt ul li{
+    float: left;
+    line-height: 0.8rem;
+    font-size: 0.25rem;
+    text-align: center;
+    color: #000;
+}
+.rest-assured-main-repair dl dt ul li:nth-child(1) {
+    width: 40%;
+
+}
+.rest-assured-main-repair dl dt ul li:nth-child(2) {
+    width: 60%;
+}
+.rest-button-servlist {
+    width: 80%;
+    height: auto;
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+    background: #4878e7;
+    color: #fff;
+    margin: 0.3rem auto;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
 .rest-assured-button-li{
     width: 90%;
     margin: 0.1rem auto;
@@ -544,6 +612,243 @@ header p{
     border-radius: 0.1rem;
 }
 /*piclist end*/
+.formedit-main-list{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 0.8rem;
+}
+.formedit-main-list dl dt{
+    width: 100%;
+    height: auto;
+    /*border-bottom: 1px #999 solid;*/
+    line-height: 0.5rem;
+    color: #000;
+    font-size: 0.3rem;
+    padding: 0.2rem 0;
+}
+.edit-form-bor{
+    border-bottom: 1px #999 solid;
+}
+.formedit-main-list dl dt span{
+    display: block;
+    width: 30%;
+    float: left;
+    overflow: hidden;
+}
+.formedit-main-list dl dt p{
+    width: 70%;
+    float: left;
+    text-align: right;
+}
+.formedit-main-botton{
+    width: 80%;
+    height: auto;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #fff;
+    background: #4878e7;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+.complain-main-botton{
+    width: 80%;
+    height: auto;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #fff;
+    background: #4878e7;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 2rem auto auto auto;
+}
+.inputre{
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border: none;
+    color: #999;
+    font: 0.25rem Arial;
+
+    text-align: right;
+    letter-spacing: 0.01rem;
+    background: #fff;
+}
+.textareare{
+    width: 100%;
+    height: 2rem;
+    line-height: 0.4rem;
+    margin: 0 auto;
+    border:  1px #999 solid;
+    color: #999;
+    font: 0.25rem Arial;
+
+    text-align: left;
+    text-indent: 0.2rem;
+    letter-spacing: 0.01rem;
+    background: #f0f3fa;
+    padding: 0.2rem 0;
+}
+.access-main-list{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 0.8rem;
+}
+.access-main-list dl dt{
+    width: 100%;
+    height: auto;
+    /*border-bottom: 1px #999 solid;*/
+    line-height: 0.8rem;
+    color: #000;
+    font-size: 0.3rem;
+    padding: 0.2rem 0 0 0;
+}
+
+.access-main-list dl dt span{
+    display: block;
+    width: 25%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+
+}
+.access-main-list dl dt p{
+    width: 25%;
+    float: left;
+    text-align: center;
+
+}
+.star-rating{
+    width: 50%;
+    float: left;
+    line-height: 0.8rem;
+    text-align: center;
+}
+.star-rating label{
+    width: auto;
+    height: auto;
+    line-height: 0.8rem;
+    color: #000;
+    font-size: 0.3rem;
+}
+.icon-jinlingyingcaiwangtubiao29{
+    font-size: 0.6rem;
+    color: #e5e5e5;
+    line-height: 0.8rem;
+}
+.addcolor{
+    color: #4878e7;
+}
+/*formedit access complain end*/
+
+.login-back{
+    width: 100%;
+    height: auto;
+}
+.login-back img{
+    width: 100%;
+    height:auto;
+    border: none;
+}
+.form-horizontal {
+    background: #fff;
+    text-align: center;
+}
+
+.form-horizontal .form-group {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    position: relative;
+}
+
+.form-horizontal .form-control {
+    background: #fff;
+    border: 1px #c6c6c6 solid;
+    box-shadow: none;
+    /*padding: 0 0.5rem 0 1.3rem;*/
+    height: 0.8rem;
+    text-indent: 1rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+    width: 100%;
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+    color: #c6c6c6;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.form-horizontal .form-group i {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.3rem;
+    font-size: 0.4rem;
+    color: #c6c6c6;
+    transition: all 0.5s ease 0s;
+}
+
+.form-horizontal .fa-question-circle {
+    display: inline-block;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.3rem;
+    font-size: 0.5rem;
+    color: #c6c6c6;
+    transition: all 0.5s ease 0s;
+}
+
+.icon-denglumima {
+    font-size: 0.65rem !important;
+    top: 0.22rem !important;
+    left: 1.05rem !important;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #c6c6c6;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #c6c6c6;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    color: #c6c6c6;
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: #c6c6c6;
+    opacity: 1;
+}
+.login-button{
+    width: 80%;
+    height: auto;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    color: #fff;
+    background: #4878e7;
+    border: none;
+    margin: 1.5rem auto auto auto;
+    text-align: center;
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+/*用户登录end*/
+/*userlogin end*/
 /*pad-pro横屏*/
 @media only screen and (min-width: 1366px) {
 

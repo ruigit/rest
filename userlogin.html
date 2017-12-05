@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <!--<link href="favicon.ico" rel="shortcut icon">-->
+    <title>放心用</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>
+    <script>
+        //			阻止穿透事件
+        $(function () {
+            new
+            FastClick(document.body);
+        })
+        //		背景高度
+        $(document).ready(function () {
+            if ($(window).height() > $(".login-content").height()) {
+                var winHeight = $(window).height();
+                $(".login-content").css({height: winHeight});
+            }
+        })
+
+        $(function () {
+//查看密码
+            $(".fa-question-circle").click(function () {
+                if ($(this).attr("data-show") == 1) {//明文
+                    $(this).attr("data-show", "2");
+                    var b = $(this).siblings(".mima_dd").val();
+                    $(this).siblings(".mima_wz").val(b);
+                    $(this).siblings(".mima_dd").hide();
+                    $(this).siblings(".mima_wz").show();
+                    return;
+                }
+                if ($(this).attr("data-show") == 2) {//密文
+                    $(this).attr("data-show", "1");
+                    var a = $(this).siblings(".mima_wz").val();
+                    $(this).siblings(".mima_dd").val(a);
+                    $(this).siblings(".mima_dd").show();
+                    $(this).siblings(".mima_wz").hide();
+                    return;
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div class="login-content">
+<div class="login-back"><img src="img/loginback.png" /></div>
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="请输入账号">
+            <i class="iconfont icon-denglu"></i>
+        </div>
+        <div class="form-group">
+            <input name="" type="text" class="form-control mima_dd " placeholder="请输入密码" style="display: none;">
+            <input name="" type="password" class="form-control mima_wz" style="display: inline-block;"
+                   placeholder="请输入密码">
+            <!--<input type="password"  class="form-control" id="inputPassword3" placeholder="登录密码">-->
+            <i class="iconfont icon-dlmm"></i>
+            <p data-show="2" class="iconfont icon-chakanmima fa-question-circle"></p>
+        </div>
+
+    </form>
+<div class="login-button">登录</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="关键字">
+    <meta name="description" content="描述">
+    <!--<link href="favicon.ico" rel="shortcut icon">-->
+    <title>放心用</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/rem.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>
+    <script>
+        //阻止穿透事件
+        $(function () {
+            new
+            FastClick(document.body);
+        });
+
+        $(document).ready(function () {
+            //		背景高度
+            var winHeight = window.innerHeight;
+            var bodyheight = $(".rest-assured").height();
+            var heade = $("header").height();
+            var num= parseInt( $('.form-main').css('marginTop') );
+            var numw= parseInt( $('.form-main').css('borderTop') );
+            var formheight = winHeight-heade-num-numw;
+            var formfheight = bodyheight-heade-num-numw;
+            if (winHeight > bodyheight){
+                $(".rest-assured").css({height: winHeight});
+                $(".form-main").css({height: formheight});
+            }else {
+                $(".rest-assured").css({height: bodyheight});
+                $(".form-main").css({height: formfheight});
+            }
+
+        })
+    </script>
+</head>
+<body>
+<div class="rest-assured">
+    <header>
+        <img src="img/head.jpg">
+        <p>放心用维修人员工作平台</p>
+        <div class="clearfix"></div>
+    </header>
+    <aside>
+        <div class="form-main">
+            <div class="form-main-head">
+                投诉
+            </div>
+            <div class="formedit-main-list">
+                <dl>
+                    <dt><span>投诉人员名称</span><p>好来</p><div class="clearfix"></div></dt>
+                    <dt><textarea name="detailed" class="textareare" cols="50" onfocus="if(value=='详细情况'){value=''}"
+                                  onblur="if (value ==''){value='详细情况'}">详细情况</textarea></dt>
+                </dl>
+            </div>
+            <div class="complain-main-botton">确认</div>
+        </div>
+    </aside>
+</div>
+</body>
+</html>

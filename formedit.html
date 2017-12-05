@@ -24,12 +24,10 @@
             new
             FastClick(document.body);
         });
-
         $(document).ready(function () {
             //		背景高度
             var winHeight = window.innerHeight;
             var bodyheight = $(".rest-assured").height();
-
             var num = parseInt($('.form-main').css('marginTop'));
             var numw = parseInt($('.form-main').css('borderTop'));
             var formheight = winHeight - num - numw;
@@ -41,7 +39,6 @@
                 $(".rest-assured").css({height: bodyheight});
                 $(".form-main").css({height: formfheight});
             }
-
         })
     </script>
 </head>

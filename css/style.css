@@ -166,7 +166,9 @@ header p {
 .rest-assured-main-service {
     width: 95%;
     height: auto;
-    margin: 0 auto;
+    margin: 0.3rem auto;
+    border: 1px #eaeef9 solid;
+    padding: 0.2rem 0;
 }
 
 .rest-assured-main-service dl dt {
@@ -177,7 +179,7 @@ header p {
 
 .rest-assured-main-service dl dt ul li {
     float: left;
-    line-height: 0.8rem;
+    line-height: 0.5rem;
     font-size: 0.25rem;
     text-align: center;
     color: #000;
@@ -195,7 +197,9 @@ header p {
 .rest-assured-main-repair {
     width: 95%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 0.3rem;
+    border: 1px #eaeef9 solid;
+    padding: 0.2rem 0;
 }
 
 .rest-assured-main-repair dl dt {
@@ -206,7 +210,7 @@ header p {
 
 .rest-assured-main-repair dl dt ul li {
     float: left;
-    line-height: 0.8rem;
+    line-height: 0.5rem;
     font-size: 0.25rem;
     text-align: center;
     color: #000;
@@ -222,13 +226,13 @@ header p {
 }
 
 .rest-button-servlist {
-    width: 80%;
+    width: 30%;
     height: auto;
-    line-height: 0.8rem;
+    line-height: 0.6rem;
     font-size: 0.3rem;
     background: #4878e7;
     color: #fff;
-    margin: 0.3rem auto;
+    margin: 0.2rem auto 0.1rem 58%;
     text-align: center;
     -moz-border-radius: 0.5rem;
     -webkit-border-radius: 0.5rem;

@@ -18,6 +18,65 @@
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/rem.min.js"></script>
     <script type="text/javascript" src="js/fastclick.min.js"></script>
+    <style>
+        #div1 {
+            font-family: "Microsoft Yahei", "微软雅黑", Arial, "sans-serif";
+            font-size: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9900;
+            overflow: hidden;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        #div2 {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            z-index: 9909;
+            padding: 1%;
+            height: auto;
+            width: 70%;
+            -moz-border-radius: 0.2rem;
+            -webkit-border-radius: 0.2rem;
+            border-radius: 0.2rem;
+            background: #fff;
+        }
+
+        #div2 h3 {
+            color: #000;
+            font-size: 0.3rem;
+            text-align: center;
+            line-height: 0.6rem;
+        }
+
+        #div2 p {
+            color: #000;
+            font-size: 0.25rem;
+            text-align: left;
+            text-indent:0.5rem;
+            line-height: 0.45rem;
+            padding:0.2rem 0.4rem;
+        }
+
+        #div2 span {
+            float: right;
+            display: block;
+            color: #4878e7;
+            font-size: 0.28rem;
+            text-align: center;
+            line-height: 0.3rem;
+            padding:0.1rem 0.3rem;
+            margin: 0 0.6rem 0.2rem auto;
+            /*border: 1px #eaeef9 solid;*/
+        }
+    </style>
     <script>
         //阻止穿透事件
         $(function () {
@@ -46,6 +105,35 @@
                 }
             });
         })
+        function MakeTipsDiv(fid) {
+            //生成提示窗
+            var div1 = document.createElement("div");
+            div1.id = "div1";
+            var div2 = document.createElement("div");
+            div2.id = "div2";
+            //div2.attr("data-fid", fid);
+            div2.innerHTML = '<p>已有正在进行的工单,请确认当前正在进行的工单即将完成,否则造成的损失由维修人员承担</p><br /><span data-type="yes">继续接单</span><span data-type="no">取消接单</span>';
+            document.body.appendChild(div1);
+            div1.appendChild(div2);
+            //按钮点击
+            $("#div2 span").on('click', function () {
+                var selType = $(this).data("type");
+                alert(fid);
+                if (selType == "yes") {
+                    //var thisFormId = $("#div2").attr("data-fid");
+                    $.ajax({
+                        type: "post",
+                        url: "../Handler/QTFormHandler.ashx",
+                        data: { type: "UpdateFormStatus", statusType: "1", formid: fid },
+                        success: function (result) {
+                            window.location.reload();
+                        }
+                    });
+                } else {
+                    $("#div1, #div2").remove();
+                }
+            });
+        }
     </script>
 </head>
 <body>
@@ -234,7 +322,7 @@
                     </dt>
                 </dl>
 
-                <div class="rest-button-servlist">按钮2</div>
+                <div class="rest-button-servlist" onclick="MakeTipsDiv()">按钮2</div>
                 <div class="clearfix"></div>
                 <div class="list-over">已完成</div>
             </div>

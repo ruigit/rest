@@ -115,6 +115,9 @@
             div2.innerHTML = '<p>已有正在进行的工单,请确认当前正在进行的工单即将完成,否则造成的损失由维修人员承担</p><br /><span data-type="yes">继续接单</span><span data-type="no">取消接单</span>';
             document.body.appendChild(div1);
             div1.appendChild(div2);
+//            在这里赋值
+//           $("#div2").attr("greeting", "Hello World");
+//            alert($("#div2").attr("greeting"))
             //按钮点击
             $("#div2 span").on('click', function () {
                 var selType = $(this).data("type");
@@ -133,6 +136,7 @@
                     $("#div1, #div2").remove();
                 }
             });
+
         }
     </script>
 </head>

@@ -330,6 +330,67 @@ header p {
     border-radius: 0.5rem;
 }
 /*index end*/
+.summain{
+    text-align: center;
+    text-indent: 0!important;
+}
+.summain-main-list {
+    width: 95%;
+    height: auto;
+    margin: 0.5rem auto;
+    padding-bottom: 1.5rem;
+}
+.summain-main-list dl dt ul li{
+    float: left;
+    font-size: 0.3rem;
+    color: #333;
+    line-height: 0.5rem;
+    text-align: center;
+    padding: 0.2rem 0;
+    box-sizing: border-box;
+    border-top:1px #999 solid;
+    border-left:1px #999 solid;
+
+}
+.summain-bor{
+    border-right:1px #999 solid;
+}
+.summain-bor-bot{
+    border-bottom:1px #999 solid;
+}
+
+.summain-main-list dl dt ul li:nth-child(1){
+    width: 45%;
+    text-align: left!important;
+    text-indent: 0.1rem;
+}
+.summain-main-list dl dt ul li:nth-child(2){
+    width: 15%;
+}
+.summain-main-list dl dt ul li:nth-child(3){
+    width: 20%;
+}
+.summain-main-list dl dt ul li:nth-child(4){
+    width: 20%;
+}
+.sum-main{
+    width: 95%;
+    margin: 0.5rem auto;
+}
+.sum-main span{
+    float: left;
+    display: block;
+    width: 15%;
+    line-height: 0.5rem;
+    font-size: 0.3rem;
+}
+.sum-main p{
+    float: left;
+    width: 75%;
+    line-height: 0.5rem;
+    font-size: 0.3rem;
+}
+/*sum end*/
 .form-main {
     width: 95%;
     height: auto;

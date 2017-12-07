@@ -180,24 +180,29 @@ header p {
 .rest-assured-main-service dl dt ul li {
     float: left;
     line-height: 0.5rem;
-    font-size: 0.22rem;
+    font-size: 0.2rem;
     text-indent: 0.2rem;
     color: #000;
 }
-
+.width-kz1{
+    text-indent: 0.1rem!important;
+}
 .rest-assured-main-service dl dt ul li:nth-child(1) {
-    width: 40%;
+    width: 27%;
     text-align: left;
 
 }
 
 .rest-assured-main-service dl dt ul li:nth-child(2) {
-    width: 57%;
+    width: 70%;
     text-align: right;
-    padding-right: 3%;
+    padding-right: 2%;
 }
 .width-kz{
-    width: 48%!important;
+    width: 41%!important;
+}
+.width-kz1{
+    width: 56%!important;
 }
 .width-kz span{
      width: 52%;
@@ -209,6 +214,21 @@ header p {
  }
 .width-kz p{
     width: 48%;
+    float: left;
+    height: 0.5rem;
+    /*text-align: left;*/
+    overflow: hidden;
+}
+.width-kz1 span{
+    width: 35%;
+    display: block;
+    float: left;
+    height: 0.5rem;
+    overflow: hidden;
+    /*text-align: left;*/
+}
+.width-kz1 p{
+    width: 65%;
     float: left;
     height: 0.5rem;
     /*text-align: left;*/
